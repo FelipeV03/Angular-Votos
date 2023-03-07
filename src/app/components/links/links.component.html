@@ -1,0 +1,20 @@
+<div class="col-md-4 offset-md-4">
+    <div class="card text-center mt-4">
+        <div class="card-header">
+            <a [href]="sanitizeUrl(link.url)" target="_blank" rel="noopener">
+                {{ link.title }}
+            </a>
+        </div>
+        <div class="card-body">
+            Puntos: <h3 class="display-4"> {{ link.votes }} </h3>
+        </div>
+        <div class="card-footer">
+            <button class="btn btn-primary" (click)="link.voteUp()">
+                Upvote
+            </button>
+            <button class="btn btn-danger" (click)="link.voteDown()">
+                Downvote
+            </button>
+        </div>
+    </div>
+</div>
